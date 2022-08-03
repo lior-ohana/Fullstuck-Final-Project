@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, TouchableHighlight, Button } from 'react
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+<<<<<<< HEAD
 import Ionicons from '@expo/vector-icons/Ionicons';
 
 import Home from './screens/Home_Screen';
@@ -25,6 +26,11 @@ const HomeStackScreen: FC<{ navigation: any, route: any }> = ({ navigation, rout
   const openAddStudent = ()=>{
       navigation.navigate("AddStudent")
   }
+=======
+
+/*
+export default function App() {
+>>>>>>> 9b8e4abd0deab3b6346c60d23d0ebb87e186f1ea
   return (
       <HomeStack.Navigator>
           <HomeStack.Screen name="Home" component={Home} 
@@ -33,8 +39,17 @@ const HomeStackScreen: FC<{ navigation: any, route: any }> = ({ navigation, rout
               }} />
       </HomeStack.Navigator>
   );
-}
+}*/
 
+const App:FC = () => {
+  return(
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+    </View>
+  )
+};
+
+<<<<<<< HEAD
 const App: FC = () => {
   return (
       <NavigationContainer>
@@ -69,3 +84,15 @@ const App:FC = () => {
 const styles = StyleSheet.create({});
 
 export default App;
+=======
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'blue',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default App;
+>>>>>>> 9b8e4abd0deab3b6346c60d23d0ebb87e186f1ea
