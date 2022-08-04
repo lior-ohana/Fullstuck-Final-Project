@@ -4,11 +4,11 @@ import { StyleSheet, Text, View, Image, TouchableHighlight, Button } from 'react
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-<<<<<<< HEAD
-import Ionicons from '@expo/vector-icons/Ionicons';
 
+import Ionicons from '@expo/vector-icons/Ionicons';
 import Home from './screens/Home_Screen';
 import COLORS from "./constants/colors"
+import Landing_Screen from './screens/Landing_Screen';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createNativeStackNavigator();
@@ -23,33 +23,17 @@ const ToBarAddButton:FC<{onClick:()=>void}>=({onClick})=>{
 };
 
 const HomeStackScreen: FC<{ navigation: any, route: any }> = ({ navigation, route }) => {
-  const openAddStudent = ()=>{
-      navigation.navigate("AddStudent")
-  }
-=======
-
-/*
-export default function App() {
->>>>>>> 9b8e4abd0deab3b6346c60d23d0ebb87e186f1ea
   return (
-      <HomeStack.Navigator>
-          <HomeStack.Screen name="Home" component={Home} 
-              options={{
-                  headerRight: ()=><ToBarAddButton onClick={()=>openAddStudent()}></ToBarAddButton>
-              }} />
+    <HomeStack.Navigator>
+
+      <HomeStack.Screen name="Landing" component={Landing_Screen} options={{
+        headerShown:false
+      }}/>
+      <HomeStack.Screen name="Home" component={Home} />
       </HomeStack.Navigator>
   );
-}*/
-
-const App:FC = () => {
-  return(
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  )
 };
 
-<<<<<<< HEAD
 const App: FC = () => {
   return (
       <NavigationContainer>
@@ -84,15 +68,3 @@ const App:FC = () => {
 const styles = StyleSheet.create({});
 
 export default App;
-=======
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'blue',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-export default App;
->>>>>>> 9b8e4abd0deab3b6346c60d23d0ebb87e186f1ea
