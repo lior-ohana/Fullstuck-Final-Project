@@ -10,7 +10,7 @@ const getAllUsers = async () => {
       const user:User ={
         email: item.userName,
         password: item.password,
-        imageUrl:item.imgUrl
+        imageUrl:item.imgUri
       }
       users.push(user)
     });
